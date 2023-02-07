@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <div className='ota  mt-5 w-100 d-flex align-items-center justify-content-center'>
       <div className='bola w-33.3 m-4'>
-        <h1 className='a mb-5 text-warning'>Revalution <span className='text-warning'>Academy</span></h1>
+        <h1 className='mb-5 text-warning'>Revalution <span className='text-warning'>Academy</span></h1>
         <h4 className='a text-light'>Telefon raqam:</h4>
         <div className='a d-flex align-items-center '>
         <i class="text-light bi bi-telephone" style={{fontSize:"30px"}}></i><h3 className='text-light'>+998 (91) 322 55 44</h3>

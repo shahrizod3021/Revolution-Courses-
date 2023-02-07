@@ -121,7 +121,7 @@ const showToast2 = ()=>{
       iMovie
     </ToastHeader>
     <ToastBody>
-    Word bu hozirgi kunda eng yaxshi sertifikat va flayerlar, testlar, hisob kitoblar va jadvallar uchun eng qulay dastur
+    iMovie haqida ma'lumotlar kam lekin biz sizga iMovie boshlang'ich o'quvchilar uchun ekanligini ayta olamiz
     </ToastBody>
   </Toast>
         </div>
@@ -144,7 +144,7 @@ const showToast2 = ()=>{
       InShot
     </ToastHeader>
     <ToastBody>
-    Word bu hozirgi kunda eng yaxshi sertifikat va flayerlar, testlar, hisob kitoblar va jadvallar uchun eng qulay dastur
+    InShot bu Android telefonlari uchun eng qulay va osson bo'lgan dastur
     </ToastBody>
   </Toast>
         </div>
