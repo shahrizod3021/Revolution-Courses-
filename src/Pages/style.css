@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    h1{
+        text-align: center;
+    }
+  }
+  @media (max-width: 400px) {
+   
+  }

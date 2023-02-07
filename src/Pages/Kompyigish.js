@@ -1,18 +1,34 @@
 import React from 'react'
-
+import d1 from './images/d1.jpg'
+import d2 from './images/d2.webp'
+import d3 from './images/d3.jpg'
+import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap'
+import { useState } from 'react'
 export default function Kompyigish() {
+  const [toast, setToast] = useState(false)
+  const [toast1, setToast1] = useState(false)
+  const [toast2, setToast2] = useState(false)
+const showToast = ()=>{
+  setToast(!toast)
+}
+const showToast1 = ()=>{
+  setToast1(!toast1)
+}
+const showToast2 = ()=>{
+  setToast2(!toast2)
+}
   return (
     <div>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={'https://4.bp.blogspot.com/-fd1KwLuBYOo/Wr95hl5AhPI/AAAAAAAADQ0/bYztROFxXeYND0SK-iXAExRWKWPZEIS2QCEwYBhgL/s1600/Computer%252BComponents.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={d1} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://avatars.mds.yandex.net/i?id=1a05e7c50c0d3625edb60bbe8ea55d8f71b10bc4-7546740-images-thumbs&n=13'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={d2} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://gizphone.ru/wp-content/uploads/2022/06/carrera-dual-soporte-y-mantenimiento-de-equipos-de-computacion-senati1800-x-1190.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={d3} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -67,6 +83,22 @@ export default function Kompyigish() {
         <div className='card-body'>
             <p className='card-text'>Kompyuter tashqi qimsi</p>
             <p className='card-text'>Kompyuter tashqi qisimlari mishka, klavitura, monitor shu kabi bo'limlarni</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast}>
+    <ToastHeader toggle={()=>showToast()}>
+      Ichki qism haqida
+    </ToastHeader>
+    <ToastBody>
+      Kompyuter ichki qimsi bu kompyuterning operativ hotiralari, protsessori, video kartasi, SSD, HDD va shu kabilar hisoblanadi.
+    </ToastBody>
+  </Toast>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
@@ -74,6 +106,22 @@ export default function Kompyigish() {
         <div className='card-body'>
             <p className='card-text'>Kompyuter ichki qismi</p>
             <p className='card-text'>Protsessor, Video karta, Operativ Xotira, Kompyuter Xotirasi shu kabilar</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast1()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast1}>
+    <ToastHeader toggle={()=>showToast1()}>
+      Tashqi qism haqida haqida
+    </ToastHeader>
+    <ToastBody>
+      Kompyuterning tashqi qismi bu sichqoncha, klavitura, monitor, kompyuter qutisi va boshqalar  
+    </ToastBody>
+  </Toast>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
@@ -81,6 +129,22 @@ export default function Kompyigish() {
         <div className='card-body'>
             <p className='card-text'>Operatsiyon Sistemlar</p>
             <p className='card-text'>Ushbu bo'limda Siz kompyuterga windows operatsioyn sistemlarni o'rantashni o'rganasiz</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast2()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast2}>
+    <ToastHeader toggle={()=>showToast2()}>
+      Operatsion sistemlar haqida
+    </ToastHeader>
+    <ToastBody>
+     Operatsion Sistema bu kompyuteni qo'llab turadigan bo'lim hisoblanadi. Hozirda Windows, MacOs, Linux Operatsion sistemelari mavjud.
+    </ToastBody>
+  </Toast>
         </div>
     </div>
 </div>

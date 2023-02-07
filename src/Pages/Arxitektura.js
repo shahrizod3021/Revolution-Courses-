@@ -1,18 +1,34 @@
 import React from 'react'
-
+import i from './images/ar4.webp'
+import ar from './images/ar5.webp'
+import ar2 from './images/ar3.webp'
+import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap'
+import { useState } from 'react'
 export default function Arxitektura() {
+  const [toast, setToast] = useState(false)
+  const [toast1, setToast1] = useState(false)
+  const [toast2, setToast2] = useState(false)
+const showToast = ()=>{
+  setToast(!toast)
+}
+const showToast1 = ()=>{
+  setToast1(!toast1)
+}
+const showToast2 = ()=>{
+  setToast2(!toast2)
+}
   return (
     <div>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={'https://printexhn.com/uploads/3/4/4/1/34415622/3d-building-construction-image-1600x1200-78597_orig.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={i} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://pvtest.ru/wp-content/uploads/4/b/d/4bdb6eecac6fceb719d2ed4663731158.jpeg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={ar} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://tecno3d.it/wp-content/uploads/2020/07/offerte-archicad-1536x813.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={ar2} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -67,6 +83,21 @@ export default function Arxitektura() {
         <div className='card-body'>
             <p className='card-text'>3D Max</p>
             <p className='card-text'>3D Max horizrgi kunda arxitektura dizayni bo'yicha yetakchi o'rinlarda turadigan dastur</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast}>
+    <ToastHeader toggle={()=>showToast()}>
+      3D Max haqida
+    </ToastHeader>
+    <ToastBody>
+    3D Max bu hozirgi kundagi yuqori pog'onada turgan animatsiya, model, arxitektura va dizayn yaratishda yordam beradigan dastur    </ToastBody>
+  </Toast>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
@@ -74,6 +105,22 @@ export default function Arxitektura() {
         <div className='card-body'>
             <p className='card-text'>AutoCad</p>
             <p className='card-text'>AutoCad bu uylarning va har xil chizmalarning 2d va 3d modellarini yaratishda ishlatilinadi</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast1()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast1}>
+    <ToastHeader toggle={()=>showToast1()}>
+      AutoCad haqida
+    </ToastHeader>
+    <ToastBody>
+      AutoCad b
+    </ToastBody>
+  </Toast>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
@@ -81,6 +128,22 @@ export default function Arxitektura() {
         <div className='card-body'>
             <p className='card-text'>Lumion</p>
             <p className='card-text'>Lumion dasturi bu yuqori siffatdagi render va shading qilish uchun yaratilingan dastur</p>
+            <Button
+    color="primary"
+    onClick={()=>showToast2()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast2}>
+    <ToastHeader toggle={()=>showToast2()}>
+      Lumio haqida
+    </ToastHeader>
+    <ToastBody>
+      Lumion bu horizda Rendring va shading qilishda eng tez ishlaydigan va eng osson bo'lgan desctop application 
+    </ToastBody>
+  </Toast>
         </div>
     </div>
 </div>

@@ -1,21 +1,37 @@
-import React from 'react'
-import a from './banner-bg.png'
+import React, { useState } from 'react'
+import w1 from './images/w1.webp'
+import w2 from './images/w2.webp'
+import w3 from './images/w3.jpg'
+import {Toast, ToastBody, ToastHeader, Button} from 'reactstrap'
+
 
 export default function WebDasturlash() {
-              
+  const [toast, setToast] = useState(false)
+  const [toast1, setToast1] = useState(false)
+  const [toast2, setToast2] = useState(false)
+const showToast = ()=>{
+  setToast(!toast)
+}
+const showToast1 = ()=>{
+  setToast1(!toast1)
+}
+const showToast2 = ()=>{
+  setToast2(!toast2)
+}
+
 
   return (
     <div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={'https://yadotek.com/wp-content/uploads/2019/11/09aea00fc018749c1c255ddfd594b218.jpeg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={w1} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://media.rbcdn.ru/media/news/shutterstock646456246_3EVk6OY.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={w2} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={'https://techcrunch.com/wp-content/uploads/2019/09/GettyImages-1005344670-1.jpg'} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={w3} class="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -66,26 +82,83 @@ export default function WebDasturlash() {
 <div className='container col-12 d-flex align-items-center justify-content-center mt-5'>
     
     <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt={""} />
         <div className='card-body'>
             <p className='card-text'>Backend</p>
             <p className='card-text'>ushbu bo'limda biz Java dasturlash tilini mukammal tarzda o'rganamiz.Davomiyligi 6oy</p>
+            <div>
+  <Button
+    color="primary"
+    onClick={()=>showToast()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast}>
+    <ToastHeader toggle={()=>showToast()}>
+      Backend haqida
+    </ToastHeader>
+    <ToastBody>
+      Backend bu web sitelarning ichki qismi bo'lib tekshiruv ishlarini olib boradi, va eng logikali qismi hisoblanadi 
+    </ToastBody>
+  </Toast>
+</div>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt={"sa"} />
         <div className='card-body'>
             <p className='card-text'>Frontend</p>
             <p className='card-text'>Ushbu bo'limda Html, Css, Java Script, Bootstrap, React.js, React-Bootstrap </p>
+            <div>
+  <Button
+    color="primary"
+    onClick={()=>showToast1()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast1}>
+    <ToastHeader toggle={()=>showToast1()}>
+      Frontend haqida
+    </ToastHeader>
+    <ToastBody>
+      Frontend bu Web sitelarning tashqi qismi bo'lib uning dizayni hisoblanadi
+    </ToastBody>
+  </Toast>
+</div>
         </div>
     </div>
     <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt={""} />
         <div className='card-body'>
             <p className='card-text'>Data Base</p>
-            <p className='card-text'>Ushbu bo'limda Data Base bo'yicha Xafsizligi tizimi kuchli bo'lgan PostgreSqlni o'rganamiz</p>
+            <p className='card-text'>Ushbu bo'limda PostgeSql Data Base dasturini o'rganamiz, Data Baseda ishlatilinadi</p>
+            <div>
+            <div>
+  <Button
+    color="primary"
+    onClick={()=>showToast2()}
+  >
+    Ko'roq ma'lumot
+  </Button>
+  <br />
+  <br />
+  <Toast isOpen={toast2}>
+    <ToastHeader toggle={()=>showToast2()}>
+      Data Base haqida 
+    </ToastHeader>
+    <ToastBody>
+      Data Base Bu Ma'lumotlar bazasi hisoblanadi. Ma'lumotlar bazasi foydalanuvchilarni yoki biror bir ma'lumotlarni saqlab qolishda va ularni ko'rishda foydalaniladi
+    </ToastBody>
+  </Toast>
+</div>
+</div>
         </div>
     </div>
+   
 </div>
     </div>
   )

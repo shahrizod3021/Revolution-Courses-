@@ -22,7 +22,7 @@ export default function Navbar() {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class=" btn btn-outline-light" style={{textDecoration:"none"}} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Courses
+            Kurslar
           </a>
           <ul class="dropdown-menu">
             {course.map(item => (
