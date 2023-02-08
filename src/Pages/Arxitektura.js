@@ -22,13 +22,13 @@ const showToast2 = ()=>{
       <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={i} className="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={i} className="d-block w-100" style={{height:"100vh"}} alt="..." />
     </div>
     <div className="carousel-item">
-      <img src={ar} className="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={ar} className="d-block w-100" style={{height:"100vh"}} alt="..." />
     </div>
     <div className="carousel-item">
-      <img src={ar2} className="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <img src={ar2} className="d-block w-100" style={{height:"100vh"}} alt="..." />
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
