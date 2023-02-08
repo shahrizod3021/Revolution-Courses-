@@ -7,8 +7,8 @@ function Admin() {
         <div className={"container"}>
             {storage.length !== 0 && storage.getItem("Password") === "0009792"?(
                 <>
-                    {storage.removeItem("Telefon raqam")}
                     <h1>Salom Admin</h1>
+                    {storage.removeItem("Telefon raqam")}
                 </>
 
             ):
