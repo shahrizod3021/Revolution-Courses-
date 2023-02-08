@@ -19,37 +19,37 @@ const showToast2 = ()=>{
 }
   return (
     <div>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src={i} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={i} className="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
-    <div class="carousel-item">
-      <img src={ar} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+    <div className="carousel-item">
+      <img src={ar} className="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
-    <div class="carousel-item">
-      <img src={ar2} class="d-block w-100" style={{height:"75vh"}} alt="..." />
+    <div className="carousel-item">
+      <img src={ar2} className="d-block w-100" style={{height:"75vh"}} alt="..." />
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
   </button>
 </div>
 <div className='container align-items-center justify-content-center mt-5'>
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+<div className="accordion accordion-flush" id="accordionFlushExample">
+  <div className="accordion-item">
+    <h2 className="accordion-header" id="flush-headingOne">
+      <button className="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
         Kurs haqida
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Arxitektura dizayni bu horzirgi kunda eng rivojlanib kelayotgan kasblardan biri bo'lib bu Hali qurilmagan uylarning dizaynini oldindan 3d modelini yaratish hisoblanadi. Agar siz bizning Revalution academymizda Arxitektura kursini tamomlasangiz biz sizni sertfikat va ish bilan taminlaymiz</div>
+    <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div className="accordion-body">Arxitektura dizayni bu horzirgi kunda eng rivojlanib kelayotgan kasblardan biri bo'lib bu Hali qurilmagan uylarning dizaynini oldindan 3d modelini yaratish hisoblanadi. Agar siz bizning Revalution academymizda Arxitektura kursini tamomlasangiz biz sizni sertfikat va ish bilan taminlaymiz</div>
     </div>
   </div>
   <div class="accordion-item">

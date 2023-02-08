@@ -8,6 +8,10 @@ import Kompyigish from './Pages/Kompyigish';
 import Komsavodxonligi from './Pages/Komsavodxonligi';
 import Vdmontaj from './Pages/Vdmontaj';
 import WebDasturlash from './Pages/WebDasturlash';
+import Login from "./Pages/Login";
+import Admin from "./Pages/Admin/Admin";
+import AdminLayout from "./Pages/Admin/AdminLayout";
+import AddCourse from "./Pages/Admin/AddCourse";
 
 
 function App() {
@@ -21,7 +25,13 @@ function App() {
             <Route path='/kompyutersavodxonligi' element={<Komsavodxonligi />} />
             <Route path='/kompyuteryigish' element={<Kompyigish />} />
             <Route path='/vdmontaj' element={<Vdmontaj />} />
+              <Route path='/login' element={<Login />}/>
+            <Route path={'/addcourse'} element={<AddCourse />} />
           </Route>
+          <Route path={'/admin'} element={<AdminLayout />}>
+            <Route index element={<Admin />}/>
+          </Route>
+            <Route path='/admin' element={<Admin />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </BrowserRouter>
