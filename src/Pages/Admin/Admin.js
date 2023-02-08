@@ -5,9 +5,8 @@ function Admin() {
     const storage = localStorage
     return (
         <div className={"container"}>
-            {storage.length !== 0?(
+            {storage.length !== 0 && storage.getItem("Password") === "0009792"?(
                 <>
-                    {storage.removeItem("Password")}
                     {storage.removeItem("Telefon raqam")}
                     <h1>Salom Admin</h1>
                 </>

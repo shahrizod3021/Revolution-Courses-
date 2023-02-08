@@ -7,14 +7,13 @@ import NotFound from "../../Components/NotFound";
 function AdminLayout() {
     return (
         <div>
-            {localStorage.length !==0? (
+            {localStorage.length !==0 && localStorage.getItem("Password") === "0009792"? (
                 <>
                     <AdminNavbar/>
                     <div>
                         <Outlet/>
                     </div>
                     <Footer/>
-                    {localStorage.removeItem("Password")}
                     {localStorage.removeItem("Telefon raqam")}
                 </>
 
