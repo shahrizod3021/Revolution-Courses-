@@ -1,14 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
-    h1{
-        text-align: center;
+.media-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    margin: 0;
+}
+
+@media only screen and (max-width: 420px) {
+    .ar-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-size: 18px;
+        color: black;
     }
-  }
-  @media (max-width: 400px) {
-   
-  }
+
+    .card {
+        padding-bottom: 300px;
+        background-color: transparent;
+    }
+    .toast-body{
+        margin-bottom: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .ar-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-size: 18px;
+        color: black;
+        background-color: transparent;
+    }
+
+    .card {
+        bottom: 100px;
+        height: 35vh;
+        background-color: transparent;
+    }
+
+}

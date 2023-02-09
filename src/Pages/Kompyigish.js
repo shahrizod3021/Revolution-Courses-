@@ -2,21 +2,7 @@ import React from 'react'
 import d1 from './images/d1.jpg'
 import d2 from './images/d2.webp'
 import d3 from './images/d3.jpg'
-import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap'
-import { useState } from 'react'
 export default function Kompyigish() {
-  const [toast, setToast] = useState(false)
-  const [toast1, setToast1] = useState(false)
-  const [toast2, setToast2] = useState(false)
-const showToast = ()=>{
-  setToast(!toast)
-}
-const showToast1 = ()=>{
-  setToast1(!toast1)
-}
-const showToast2 = ()=>{
-  setToast2(!toast2)
-}
   return (
     <div>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -75,79 +61,35 @@ const showToast2 = ()=>{
 </div>
 </div>
 
-<h1 className='text-center mt-5'>Nimalarni o'rganamiz</h1>
-<div className='container col-12 d-flex align-items-center justify-content-center mt-5'>
-    
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Kompyuter tashqi qimsi</p>
-            <p className='card-text'>Kompyuter tashqi qisimlari mishka, klavitura, monitor shu kabi bo'limlarni</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast}>
-    <ToastHeader toggle={()=>showToast()}>
-      Ichki qism haqida
-    </ToastHeader>
-    <ToastBody>
-      Kompyuter ichki qimsi bu kompyuterning operativ hotiralari, protsessori, video kartasi, SSD, HDD va shu kabilar hisoblanadi.
-    </ToastBody>
-  </Toast>
+      <h1 className='nima text-center mt-5 mb-5'>Nimalarni o'rganamiz</h1>
+      <div className={"media-cart"}>
+        <div className='container ar-cart col-12 d-flex mt-5 justify-content-center'>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>Ichki qism</p>
+              <p className='card-text'>Bu bo'limda biz kompyuterning ichi componentlarini o'rganamiz. Davomiyligi 1oy</p>
+
+            </div>
+          </div>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>Tashqi qismi</p>
+              <p className='card-text'>Bu bo'limda biz kompyuter tashqi qismlarini o'rganamiz, Davomiyligi 1oy</p>
+
+            </div>
+          </div>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>Operatsion sistema</p>
+              <p className='card-text'>Bu bo'limda biz windows operatsion sistemasini o'rganamiz. Davomiyligi 1 hafta</p>
+
+            </div>
+          </div>
         </div>
-    </div>
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Kompyuter ichki qismi</p>
-            <p className='card-text'>Protsessor, Video karta, Operativ Xotira, Kompyuter Xotirasi shu kabilar</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast1()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast1}>
-    <ToastHeader toggle={()=>showToast1()}>
-      Tashqi qism haqida haqida
-    </ToastHeader>
-    <ToastBody>
-      Kompyuterning tashqi qismi bu sichqoncha, klavitura, monitor, kompyuter qutisi va boshqalar  
-    </ToastBody>
-  </Toast>
-        </div>
-    </div>
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Operatsiyon Sistemlar</p>
-            <p className='card-text'>Ushbu bo'limda Siz kompyuterga windows operatsioyn sistemlarni o'rantashni o'rganasiz</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast2()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast2}>
-    <ToastHeader toggle={()=>showToast2()}>
-      Operatsion sistemlar haqida
-    </ToastHeader>
-    <ToastBody>
-     Operatsion Sistema bu kompyuteni qo'llab turadigan bo'lim hisoblanadi. Hozirda Windows, MacOs, Linux Operatsion sistemelari mavjud.
-    </ToastBody>
-  </Toast>
-        </div>
-    </div>
-</div>
+      </div>
     </div>
   )
 }

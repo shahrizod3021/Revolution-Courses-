@@ -2,21 +2,8 @@ import React from 'react'
 import s1 from './images/savod1.jpg'
 import s2 from './images/savod2.webp'
 import s3 from './images/savod3.jpg'
-import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap'
-import { useState } from 'react'
 export default function Komsavodxonligi() {
-  const [toast, setToast] = useState(false)
-  const [toast1, setToast1] = useState(false)
-  const [toast2, setToast2] = useState(false)
-const showToast = ()=>{
-  setToast(!toast)
-}
-const showToast1 = ()=>{
-  setToast1(!toast1)
-}
-const showToast2 = ()=>{
-  setToast2(!toast2)
-}
+
   return (
     <div>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -75,79 +62,35 @@ const showToast2 = ()=>{
 </div>
 </div>
 
-<h1 className='text-center mt-5'>Nimalarni o'rganamiz</h1>
-<div className='container col-12 d-flex align-items-center justify-content-center mt-5'>
-    
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Word</p>
-            <p className='card-text'>Word bu hozirgi kunda har xil sertifikat va resumelar jadvallar, testlar tuzish uchun eng maqul bo'lgan dastur</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast}>
-    <ToastHeader toggle={()=>showToast()}>
-      Word haqida
-    </ToastHeader>
-    <ToastBody>
-    Word bu hozirgi kunda eng yaxshi sertifikat va flayerlar, testlar, hisob kitoblar va jadvallar uchun eng qulay dastur
-    </ToastBody>
-  </Toast>
+      <h1 className='nima text-center mt-5 mb-5'>Nimalarni o'rganamiz</h1>
+      <div className={"media-cart"}>
+        <div className='container ar-cart col-12 d-flex mt-5 justify-content-center'>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>3D Max</p>
+              <p className='card-text'>3D Max horizrgi kunda arxitektura dizayni bo'yicha yetakchi o'rinlarda turadigan dastur</p>
+
+            </div>
+          </div>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>AutoCad</p>
+              <p className='card-text'>AutoCad bu uylarning va har xil chizmalarning 2d va 3d modellarini yaratishda ishlatilinadi</p>
+
+            </div>
+          </div>
+          <div className='card col-4 m-3' style={{width:"18rem"}}>
+            <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
+            <div className='card-body'>
+              <p className='card-text'>Lumion</p>
+              <p className='card-text'>Lumion dasturi bu yuqori siffatdagi render va shading qilish uchun yaratilingan dastur</p>
+
+            </div>
+          </div>
         </div>
-    </div>
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Exel</p>
-            <p className='card-text'>Exel bu hozirgi kundagi Hisob kitob amallari uchun mo'ljallangan eng yaxshi dastur hisoblanadi. Bugalteriya ishida ishlatilinadi</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast1()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast1}>
-    <ToastHeader toggle={()=>showToast1()}>
-      Exel haqida
-    </ToastHeader>
-    <ToastBody>
-    Exel hisob kitobli ishlarda judayam ko'p qo'llaniladigan va bugalterlar uchun qulay bo'lgan dastur
-    </ToastBody>
-  </Toast>
-        </div>
-    </div>
-    <div className='card col-4 m-3' style={{width:"18rem"}}>
-        <img className='card-img-top' src={"https://avatars.mds.yandex.net/i?id=279d28fed3291b6cbcd168f3b696317792464cda-8497538-images-thumbs&n=13"} alt="not found" />
-        <div className='card-body'>
-            <p className='card-text'>Power Point</p>
-            <p className='card-text'>Power Point bu har xil presentatisyalar tayyorlash slayd showlarni tayyorlashda ishlatilinadigan  office dasturi</p>
-            <Button
-    color="primary"
-    onClick={()=>showToast2()}
-  >
-    Ko'roq ma'lumot
-  </Button>
-  <br />
-  <br />
-  <Toast isOpen={toast2}>
-    <ToastHeader toggle={()=>showToast2()}>
-      Power Point 
-    </ToastHeader>
-    <ToastBody>
-        Power Point Sizga salyd showlar va presentatsiyalar yaratishingizga yordam beradigan eng qulay dastur
-    </ToastBody>
-  </Toast>
-        </div>
-    </div>
-</div>
+      </div>
     </div>
   )
 }
